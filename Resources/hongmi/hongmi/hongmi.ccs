@@ -1,0 +1,48 @@
+<Solution>
+  <PropertyGroup Name="hongmi" Version="2.1.5.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="loading.csd" Type="Scene" />
+        <PlistImageFolder PListFile="bug-0.plist" Name=".bug-0_PList.Dir">
+          <PlistImageFile Name="bug-0-1.png" Key="bug-0-1.png" />
+          <PlistImageFile Name="bug-0-2.png" Key="bug-0-2.png" />
+          <PlistImageFile Name="bug-0-3.png" Key="bug-0-3.png" />
+          <PlistImageFile Name="bug-0-4.png" Key="bug-0-4.png" />
+          <PlistImageFile Name="bug-0-5.png" Key="bug-0-5.png" />
+          <PlistImageFile Name="bug-0-6.png" Key="bug-0-6.png" />
+          <PlistImageFile Name="bug-0-7.png" Key="bug-0-7.png" />
+          <PlistImageFile Name="bug-0-8.png" Key="bug-0-8.png" />
+        </PlistImageFolder>
+        <PlistImageFolder PListFile="menu.plist" Name=".menu_PList.Dir">
+          <PlistImageFile Name="menu-bakground.png" Key="menu-bakground.png" />
+          <PlistImageFile Name="menu-seting-default.png" Key="menu-seting-default.png" />
+          <PlistImageFile Name="menu-seting-press.png" Key="menu-seting-press.png" />
+          <PlistImageFile Name="menu-start.png" Key="menu-start.png" />
+        </PlistImageFolder>
+        <PlistImageFolder PListFile="comic.plist" Name=".comic_PList.Dir">
+          <PlistImageFile Name="comic-background.png" Key="comic-background.png" />
+          <PlistImageFile Name="comic-skip.png" Key="comic-skip.png" />
+        </PlistImageFolder>
+        <PlistImageFolder PListFile="end.plist" Name=".end_PList.Dir">
+          <PlistImageFile Name="end-background.png" Key="end-background.png" />
+          <PlistImageFile Name="end-menu-default.png" Key="end-menu-default.png" />
+          <PlistImageFile Name="end-menu-press.png" Key="end-menu-press.png" />
+          <PlistImageFile Name="end-playagain-default.png" Key="end-playagain-default.png" />
+          <PlistImageFile Name="end-playagain-press.png" Key="end-playagain-press.png" />
+        </PlistImageFolder>
+        <PlistImageFolder PListFile="main.plist" Name=".main_PList.Dir">
+          <PlistImageFile Name="main-background.png" Key="main-background.png" />
+          <PlistImageFile Name="main-cake.png" Key="main-cake.png" />
+          <PlistImageFile Name="main-flower.png" Key="main-flower.png" />
+          <PlistImageFile Name="main-hp-cake-default.png" Key="main-hp-cake-default.png" />
+          <PlistImageFile Name="main-hp-cake-injured.png" Key="main-hp-cake-injured.png" />
+          <PlistImageFile Name="main-score-icon.png" Key="main-score-icon.png" />
+        </PlistImageFolder>
+        <Project Name="main.csd" Type="Scene" />
+        <Project Name="menu.csd" Type="Scene" />
+        <Project Name="end.csd" Type="Scene" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
