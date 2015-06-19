@@ -2,6 +2,7 @@
 #include "HelloWorldScene.h"
 #include "loadingscene.h"
 #include "GameMarcos.h"
+#include "maincontroller.h"
 
 USING_NS_CC;
 using namespace patgame;
@@ -27,34 +28,38 @@ void AppDelegate::initGLContextAttrs()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
-    auto director = Director::getInstance();
-    auto glview = director->getOpenGLView();
+   auto director = Director::getInstance();
+     auto glview = director->getOpenGLView();
     if(!glview) {
         glview = GLViewImpl::create("Bug");
         director->setOpenGLView(glview);
     }
 
-    /**************************/
+/*******
 
-//    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, kResolutionNoBorder);
+
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, kResolutionNoBorder);
-//        CCSize framSize = pEGLView->getFrameSize();
+
     Size framSize = glview->getFrameSize();
 
-    std::vector<std::string> dir;
-    dir.push_back("res");
-    FileUtils::sharedFileUtils()->setSearchResolutionsOrder(dir);
 
+    director->setContentScaleFactor(hongMiResource.size.width/designResolutionSize.width);
+*******************/
+//    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, kResolutionNoBorder);
+//        CCSize framSize = pEGLView->getFrameSize();
 //        CCString mm;
 //        mm = CCFileUtils::sharedFileUtils()->getResourceDirectory();
 
 //        CCLOG("curent URL: %s", mm);
-    director->setContentScaleFactor(hongMiResource.size.width/designResolutionSize.width);
+
 //        pDirector->setContentScaleFactor(hongMiResource.size.width/designResolutionSize.width);
 
 
     /******************************/
 
+    std::vector<std::string> dir;
+    dir.push_back("res");
+    FileUtils::sharedFileUtils()->setSearchResolutionsOrder(dir);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -64,6 +69,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene =  LoadingScene::createScene();
+
+//    auto scene = MainController::create();
+//    Scene* scene = Scene::create();
+//    Sprite* s = Sprite::create("CloseNormal.png");
+//    s->setPosition(0, 0);
+//    scene->addChild(s);
 
     // run
     director->runWithScene(scene);

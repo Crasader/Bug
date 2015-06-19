@@ -1,6 +1,6 @@
 #include "mainlayer.h"
 #include "cocostudio/CocoStudio.h"
-#include "bugsprite.h"
+#include "bugscontroller.h"
 
 using namespace cocostudio;
 
@@ -29,8 +29,11 @@ void MainLayer::onEnter(){
     this->setTouchMode(Touch::DispatchMode::ONE_BY_ONE);
     this->setContentSize(Director::getInstance()->getVisibleSize());
 
-    bug = BugSprite::create();
-    this->addChild(bug);
+//    bug = BugSprite::create();
+//    this->addChild(bug);
+//    BugsController* bugsController = BugsController::create();
+//    bugsController->setPosition(ccp(0.0f,0.0f));
+//    this->addChild(bugsController);
 }
 
 

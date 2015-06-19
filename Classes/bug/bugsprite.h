@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "cocostudio/CocoStudio.h"
+#include "bugmodel.h"
 
 USING_NS_CC;
 using namespace cocostudio::timeline;
@@ -10,18 +11,22 @@ using namespace cocostudio::timeline;
 class BugSprite : public Node
 {
 public:
-    BugSprite();
-    CREATE_FUNC(BugSprite);
+    BugSprite(BugModel* model);
+    static BugSprite* create(BugModel *model);
     bool init();
     void onEnter();
 
-    void bugRun();
+    bool onTouchBegan(Touch* touch, Event* event);
+    bool containsTouchLocation(Touch* touch);
 
+    void bugRun();
+    void moveToPoint(Point point);
+    void rotationToPoint(Point point);
 private:
-//    Node* _root;
+    BugModel *model;
+    Node* _root;
     ActionTimeline* action;
 //    Sprite* _sprite;
-    ;
 };
 
 #endif // BUGSPRITE_H

@@ -1,12 +1,37 @@
 #ifndef BUGMODEL_H
 #define BUGMODEL_H
 
-class BugModel
+#include "cocos2d.h"
+
+USING_NS_CC;
+
+
+
+typedef struct Properties{
+    int hp;
+    float speed;
+
+}BugProperties;
+
+
+
+
+class BugModel : public Node
 {
 public:
-    BugModel();
+    BugModel(BugProperties properties);
+    ~BugModel();
+
+    static BugModel* create(BugProperties properties);
+
+    bool init();
+    float getSpeed();
+
+    void onMoveEnd(Ref* sender);
+    void onClick();
 
 private:
+    BugProperties properties;
 
 };
 
